@@ -1,0 +1,37 @@
+<odoo>
+  <data>
+
+
+    <record model="ir.actions.act_window" id="school.action_student_window">
+      <field name="name">school student window</field>
+      <field name="res_model">school.student</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+     <record model="ir.actions.act_window" id="school.action_topic_window">
+      <field name="name">school topics window</field>
+      <field name="res_model">school.topic</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+   
+      <!--Top menu item -->
+
+    <menuitem name="school" id="school.menu_root"/>
+
+      <!-- menu categories -->
+
+    <menuitem name="Management" id="school.menu_1" parent="school.menu_root"/>
+
+
+    <!-- actions -->
+
+    <menuitem name="Student" id="school.menu_school_student" parent="school.menu_1"
+              action="school.action_student_window"/>
+    
+    <menuitem name="Topic" id="school.menu_school_topic" parent="school.menu_1"
+              action="school.action_topic_window"/>
+
+
+  </data>
+</odoo>
