@@ -1,11 +1,12 @@
 # -*- coding: utf-8 -*-
 
-# from odoo import models, fields, api
+from email.policy import default
+from odoo import models, fields, api
 
 
-# class game(models.Model):
-#     _name = 'game.game'
-#     _description = 'game.game'
+class player(models.Model):
+   _name = 'expanse.player'    
+   _description = 'Players of the game'
 
 #     name = fields.Char()
 #     value = fields.Integer()
@@ -16,3 +17,9 @@
 #     def _value_pc(self):
 #         for record in self:
 #             record.value2 = float(record.value) / 100
+
+class colony(models.Model):
+   _name = 'expanse.colomny'    
+   _description = 'colonies'
+
+   creadacion_data= fields.Datetime(default = fields.Datetime.now())

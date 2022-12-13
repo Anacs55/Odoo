@@ -69,10 +69,9 @@
                                         <h4 class="o_kanban_record_title oe_partner_heading" ><field name="name"/></h4>
                                          <button name="boton_comprar_objetos"
                                                 type="object"
-                                                string="Comprar Objetos"
                                                 class="btn btn-primary"
                                                 context="{'ctx_player':parent.id}">
-                                          </button>  
+                                          Comprar Objetos</button>  
                                   </a>
                                   <ul>
                                     <li>Descripcion: <field name="descripcion"/></li>
@@ -145,7 +144,7 @@
       <field name="name">Subtipo</field>
       <field name="model">ernon2.subtipo</field>
       <field name="arch" type="xml">
-        <tree>
+        <tree decoration-danger="name=='Amatiel'" >
             <field name="name"/>
             <field name="descripcion"/>
              <field name="imagen" widget="image"/>
